@@ -16,6 +16,19 @@ public enum BwVariableKind
     JobShared
 }
 
+public enum BwBackendKind
+{
+    Unknown,
+    Http,
+    Soap,
+    Jdbc,
+    Jms,
+    Rv,
+    File,
+    Ftp,
+    Sftp
+}
+
 public sealed class BwResourceFile
 {
     public string Path { get; init; } = "";
@@ -26,6 +39,7 @@ public sealed class BwResourceFile
     public List<string> ProcessReferences { get; init; } = new();
     public List<string> SharedResourceReferences { get; init; } = new();
     public List<BwMessageReference> MessageReferences { get; init; } = new();
+    public List<BwBackendConnection> BackendConnections { get; init; } = new();
 }
 
 public sealed class BwVariableUsage
@@ -50,6 +64,36 @@ public sealed class BwDependencyEdge
     public string DependencyType { get; init; } = "";
 }
 
+public sealed class BwResolvedValue
+{
+    public string Name { get; init; } = "";
+    public string Value { get; init; } = "";
+    public string SourceType { get; init; } = "";
+    public string SourceName { get; init; } = "";
+    public string SourcePath { get; init; } = "";
+    public string Evidence { get; init; } = "";
+}
+
+public sealed class BwBackendConnection
+{
+    public BwBackendKind Kind { get; init; }
+    public string SourceType { get; init; } = "";
+    public string SourceName { get; init; } = "";
+    public string SourcePath { get; init; } = "";
+    public string ResourceRef { get; init; } = "";
+    public string ActivityName { get; init; } = "";
+    public string Url { get; init; } = "";
+    public string Host { get; init; } = "";
+    public string Port { get; init; } = "";
+    public string PathOrOperation { get; init; } = "";
+    public string Username { get; init; } = "";
+    public string PasswordReference { get; init; } = "";
+    public string DriverOrFactory { get; init; } = "";
+    public string Destination { get; init; } = "";
+    public List<string> VariableReferences { get; init; } = new();
+    public List<BwResolvedValue> ResolvedValues { get; init; } = new();
+}
+
 public sealed class BwRepositoryIndex
 {
     public string RootPath { get; init; } = "";
@@ -67,4 +111,5 @@ public sealed class BwMessageDependencyReport
     public List<string> JobSharedVariables { get; init; } = new();
     public List<string> SharedResources { get; init; } = new();
     public List<BwDependencyEdge> TraversedEdges { get; init; } = new();
+    public List<BwBackendConnection> BackendConnections { get; init; } = new();
 }
