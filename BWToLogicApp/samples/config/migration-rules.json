@@ -1,0 +1,22 @@
+{
+  "rules": [
+    {
+      "sourceActivityType": "MapperActivity",
+      "canonicalCapability": "DataTransformation",
+      "targetConstruct": "Compose or Transform XML",
+      "hint": "Use Compose or an XML transform action."
+    },
+    {
+      "sourceActivityType": "HttpActivity",
+      "canonicalCapability": "HttpInvocation",
+      "targetConstruct": "HTTP action",
+      "hint": "Externalize URL, headers and auth as parameters."
+    },
+    {
+      "sourceActivityType": "ReceiveHttpActivity",
+      "canonicalCapability": "MessageTrigger",
+      "targetConstruct": "Request trigger",
+      "hint": "Generate a request schema from sample payload."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<process name="OrderProcess" xmlns="http://example.com/bw5">
+  <starter messageName="OrderMessage" />
+  <variable name="orderId" type="string" />
+  <activity name="ReceiveOrder" type="ReceiveHttpActivity" />
+  <activity name="MapOrder" type="MapperActivity">
+    <mapping name="OrderMap">
+      <map from=" /Order /Id " to="/CanonicalOrder/Id" />
+      <map from="$GlobalVariables/Order/Channel" to="/CanonicalOrder/Channel" />
+    </mapping>
+  </activity>
+  <activity name="InvokeApi" type="HttpActivity" />
+  <activity name="SendQueue" type="SendActivity" />
+  <transition from="ReceiveOrder" to="MapOrder" conditionType="Success" />
+  <transition from="MapOrder" to="InvokeApi" conditionType="Success" />
+  <transition from="InvokeApi" to="SendQueue" conditionType="Success" />
+</process>

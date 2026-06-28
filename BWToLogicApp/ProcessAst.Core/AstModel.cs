@@ -1,0 +1,94 @@
+namespace ProcessAst.Core;
+
+public enum ProcessNodeKind { Repository, Message, Process, SubProcess, Activity, Transition, Mapping, Variable, Resource, GraphNode, GraphEdge, Unknown }
+public enum VariableScope { Local, Global, Message, Resource, System }
+public enum ActivitySemanticKind { Start, End, ServiceCall, Mapper, Assignment, Decision, Loop, Group, SubProcessCall, Receive, Send, Wait, ErrorHandler, Unknown }
+public enum TransitionSemanticKind { Success, Conditional, Exception, Timeout, Otherwise, Unknown }
+public enum MappingExpressionKind { XPath, Xslt, Literal, VariableReference, Unknown }
+
+public sealed class SourceLocation { public string FilePath { get; init; } = ""; public int? Line { get; init; } public int? Column { get; init; } }
+
+public abstract class AstNode
+{
+    public string Id { get; init; } = Guid.NewGuid().ToString("N");
+    public string Name { get; set; } = "";
+    public ProcessNodeKind Kind { get; init; }
+    public SourceLocation? Source { get; set; }
+    public Dictionary<string,string> Metadata { get; } = new(StringComparer.OrdinalIgnoreCase);
+    public List<AstNode> Children { get; } = new();
+}
+
+public sealed class ProcessRepositoryAst : AstNode
+{
+    public List<ProcessDefinitionAst> Processes { get; } = new();
+    public List<VariableDefinitionAst> GlobalVariables { get; } = new();
+    public List<ResourceDefinitionAst> Resources { get; } = new();
+    public List<MessageDefinitionAst> RootMessages { get; } = new();
+}
+
+public sealed class MessageDefinitionAst : AstNode
+{
+    public string? SchemaType { get; set; }
+    public List<string> EntryProcessIds { get; } = new();
+    public List<string> RelatedResourceIds { get; } = new();
+}
+
+public sealed class ProcessDefinitionAst : AstNode
+{
+    public bool IsSubProcess { get; set; }
+    public string? InitialMessageName { get; set; }
+    public List<ActivityDefinitionAst> Activities { get; } = new();
+    public List<TransitionDefinitionAst> Transitions { get; } = new();
+    public List<VariableDefinitionAst> LocalVariables { get; } = new();
+    public List<MappingDefinitionAst> Mappings { get; } = new();
+    public List<string> ResourceIds { get; } = new();
+    public List<string> CalledSubProcessIds { get; } = new();
+}
+
+public sealed class ActivityDefinitionAst : AstNode
+{
+    public ActivitySemanticKind SemanticKind { get; set; } = ActivitySemanticKind.Unknown;
+    public string ActivityType { get; set; } = "";
+    public Dictionary<string,string> Inputs { get; } = new(StringComparer.OrdinalIgnoreCase);
+    public Dictionary<string,string> Outputs { get; } = new(StringComparer.OrdinalIgnoreCase);
+}
+
+public sealed class TransitionDefinitionAst : AstNode
+{
+    public string FromActivityId { get; set; } = "";
+    public string ToActivityId { get; set; } = "";
+    public TransitionSemanticKind SemanticKind { get; set; } = TransitionSemanticKind.Unknown;
+    public string? ConditionExpression { get; set; }
+}
+
+public sealed class MappingDefinitionAst : AstNode
+{
+    public string? OwnerProcessId { get; set; }
+    public string? OwnerActivityId { get; set; }
+    public List<MappingEntryAst> Entries { get; } = new();
+}
+
+public sealed class MappingEntryAst
+{
+    public string TargetPath { get; set; } = "";
+    public string SourceExpression { get; set; } = "";
+    public string? NormalizedExpression { get; set; }
+    public string? Transform { get; set; }
+    public MappingExpressionKind ExpressionKind { get; set; } = MappingExpressionKind.Unknown;
+}
+
+public sealed class VariableDefinitionAst : AstNode
+{
+    public VariableScope Scope { get; set; }
+    public string DataType { get; set; } = "string";
+    public string? DefaultValue { get; set; }
+    public string? Expression { get; set; }
+}
+
+public sealed class ResourceDefinitionAst : AstNode
+{
+    public string ResourceType { get; set; } = "";
+    public string? Address { get; set; }
+    public List<string> UsedByProcessIds { get; } = new();
+    public List<string> RelatedMessageNames { get; } = new();
+}

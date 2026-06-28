@@ -1,0 +1,13 @@
+# Simple YAML-like rules
+- SourceActivityType: MapperActivity
+  CanonicalCapability: DataTransformation
+  TargetConstruct: Compose or Transform XML
+  Hint: Use Compose or XML transform
+- SourceActivityType: HttpActivity
+  CanonicalCapability: HttpInvocation
+  TargetConstruct: HTTP action
+  Hint: Map endpoint and authentication
+- SourceActivityType: ReceiveHttpActivity
+  CanonicalCapability: MessageTrigger
+  TargetConstruct: Request trigger
+  Hint: Build request schema from payload
