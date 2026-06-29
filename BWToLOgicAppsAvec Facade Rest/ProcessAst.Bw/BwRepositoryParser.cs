@@ -39,6 +39,7 @@ public sealed class BwRepositoryParser
         DiscoverMessages(repo);
         ResolveSubProcesses(repo, processIndex);
         RelateResources(repo);
+        GenerateIntegrationFacades(repo);
         return repo;
     }
 
@@ -58,6 +59,7 @@ public sealed class BwRepositoryParser
             {
                 var type = n.Attribute("type")?.Value ?? ln;
                 var a = new ActivityDefinitionAst { Name = n.Attribute("name")?.Value ?? ln, Kind = ProcessNodeKind.Activity, ActivityType = type, SemanticKind = InferActivity(type, ln), Source = Line(path, n) };
+                if (type.Contains("http", StringComparison.OrdinalIgnoreCase)) a.Inputs["url"] = n.Attribute("url")?.Value ?? n.Attribute("endpoint")?.Value ?? "https://example.org";
                 process.Activities.Add(a);
                 if (type.Contains("CallProcess", StringComparison.OrdinalIgnoreCase))
                 {
@@ -166,10 +168,49 @@ public sealed class BwRepositoryParser
         }
     }
 
+    private static void GenerateIntegrationFacades(ProcessRepositoryAst repo)
+    {
+        foreach (var resource in repo.Resources.ToList())
+        {
+            var endpoint = new IntegrationEndpointDefinitionAst
+            {
+                Name = resource.Name + "_Facade",
+                Kind = ProcessNodeKind.Resource,
+                SourceResourceId = resource.Id,
+                Source = resource.Source
+            };
+
+            if (!string.IsNullOrWhiteSpace(resource.Address) && (resource.Address.StartsWith("http://", StringComparison.OrdinalIgnoreCase) || resource.Address.StartsWith("https://", StringComparison.OrdinalIgnoreCase)))
+            {
+                endpoint.FacadeKind = IntegrationFacadeKind.ApimApi;
+                endpoint.BackendUrl = resource.Address;
+                endpoint.DisplayPath = "/" + resource.Name.ToLowerInvariant();
+                endpoint.HttpMethod = "POST";
+                endpoint.ContractName = resource.Name + "Api";
+                endpoint.Policies["authentication"] = "managed-identity-or-subscription-key";
+                endpoint.Policies["rewrite-uri"] = endpoint.DisplayPath!;
+            }
+            else if (!string.IsNullOrWhiteSpace(resource.Address) && resource.Address.StartsWith("sb://", StringComparison.OrdinalIgnoreCase))
+            {
+                endpoint.FacadeKind = IntegrationFacadeKind.ServiceBusQueue;
+                endpoint.QueueOrTopicName = resource.Name.ToLowerInvariant();
+                endpoint.ContractName = resource.Name + "Queue";
+                endpoint.Policies["transport"] = "service-bus";
+            }
+            else
+            {
+                endpoint.FacadeKind = IntegrationFacadeKind.DirectResource;
+                endpoint.ContractName = resource.Name + "Direct";
+            }
+
+            repo.Children.Add(endpoint);
+        }
+    }
+
     private static bool IsProcessFile(string f) => Path.GetExtension(f).Equals(".process", StringComparison.OrdinalIgnoreCase) || Path.GetExtension(f).Equals(".subprocess", StringComparison.OrdinalIgnoreCase);
     private static SourceLocation Line(string path, XElement node) { var li = (System.Xml.IXmlLineInfo)node; return new SourceLocation { FilePath = path, Line = li.HasLineInfo() ? li.LineNumber : null, Column = li.HasLineInfo() ? li.LinePosition : null }; }
     private static string DetectVersion(XDocument doc) { var root = doc.Root?.Name.NamespaceName ?? string.Empty; return root.Contains("bw6", StringComparison.OrdinalIgnoreCase) || root.Contains("businessstudio", StringComparison.OrdinalIgnoreCase) ? "BW6" : "BW5"; }
-    private static string? ExtractAddress(string text) { var http = Regex.Match(text, @"https?://[^\""""'\s<>]+", RegexOptions.IgnoreCase).Value; if (!string.IsNullOrWhiteSpace(http)) return http; var jdbc = Regex.Match(text, @"jdbc:[^\""""'\s<>]+", RegexOptions.IgnoreCase).Value; if (!string.IsNullOrWhiteSpace(jdbc)) return jdbc; return null; }
+    private static string? ExtractAddress(string text) { var http = Regex.Match(text, @"https?://[^\""""'\s<>]+", RegexOptions.IgnoreCase).Value; if (!string.IsNullOrWhiteSpace(http)) return http; var sb = Regex.Match(text, @"sb://[^\""""'\s<>]+", RegexOptions.IgnoreCase).Value; if (!string.IsNullOrWhiteSpace(sb)) return sb; var jdbc = Regex.Match(text, @"jdbc:[^\""""'\s<>]+", RegexOptions.IgnoreCase).Value; if (!string.IsNullOrWhiteSpace(jdbc)) return jdbc; return null; }
     private static ActivitySemanticKind InferActivity(string type, string localName) { var t=(type+" "+localName).ToLowerInvariant(); if (t.Contains("start")||t.Contains("receivehttp")) return ActivitySemanticKind.Start; if (t.Contains("end")) return ActivitySemanticKind.End; if (t.Contains("mapper")||t.Contains("mapdata")) return ActivitySemanticKind.Mapper; if (t.Contains("assign")) return ActivitySemanticKind.Assignment; if (t.Contains("choice")||t.Contains("condition")) return ActivitySemanticKind.Decision; if (t.Contains("iterate")||t.Contains("foreach")||t.Contains("repeat")) return ActivitySemanticKind.Loop; if (t.Contains("callprocess")) return ActivitySemanticKind.SubProcessCall; if (t.Contains("service")||t.Contains("http")||t.Contains("jdbc")||t.Contains("soap")) return ActivitySemanticKind.ServiceCall; if (t.Contains("receive")) return ActivitySemanticKind.Receive; if (t.Contains("send")||t.Contains("publish")) return ActivitySemanticKind.Send; return ActivitySemanticKind.Unknown; }
     private static TransitionSemanticKind InferTransition(string? type) { var t=type?.ToLowerInvariant()??""; if (t.Contains("success")) return TransitionSemanticKind.Success; if (t.Contains("condition")) return TransitionSemanticKind.Conditional; if (t.Contains("exception")) return TransitionSemanticKind.Exception; if (t.Contains("timeout")) return TransitionSemanticKind.Timeout; if (t.Contains("otherwise")) return TransitionSemanticKind.Otherwise; return TransitionSemanticKind.Unknown; }
 }
