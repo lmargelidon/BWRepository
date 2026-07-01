@@ -1,0 +1,65 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ProcessAst.Host/1.0.0": {
+        "dependencies": {
+          "ProcessAst.Core": "1.0.0",
+          "ProcessAst.RestFacade": "1.0.0",
+          "ProcessAst.Runtime": "1.0.0"
+        },
+        "runtime": {
+          "ProcessAst.Host.dll": {}
+        }
+      },
+      "ProcessAst.Core/1.0.0": {
+        "runtime": {
+          "ProcessAst.Core.dll": {}
+        }
+      },
+      "ProcessAst.RestFacade/1.0.0": {
+        "dependencies": {
+          "ProcessAst.Core": "1.0.0",
+          "ProcessAst.Runtime": "1.0.0"
+        },
+        "runtime": {
+          "ProcessAst.RestFacade.dll": {}
+        }
+      },
+      "ProcessAst.Runtime/1.0.0": {
+        "dependencies": {
+          "ProcessAst.Core": "1.0.0"
+        },
+        "runtime": {
+          "ProcessAst.Runtime.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProcessAst.Host/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProcessAst.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProcessAst.RestFacade/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProcessAst.Runtime/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

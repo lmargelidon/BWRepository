@@ -1,0 +1,15 @@
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\bin\Debug\net8.0\ProcessAst.Runtime.deps.json
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\bin\Debug\net8.0\ProcessAst.Runtime.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\bin\Debug\net8.0\ProcessAst.Runtime.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\bin\Debug\net8.0\ProcessAst.Core.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\bin\Debug\net8.0\ProcessAst.Core.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\obj\Debug\net8.0\ProcessAst.Runtime.csproj.AssemblyReference.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\obj\Debug\net8.0\ProcessAst.Runtime.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\obj\Debug\net8.0\ProcessAst.Runtime.AssemblyInfoInputs.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\obj\Debug\net8.0\ProcessAst.Runtime.AssemblyInfo.cs
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\obj\Debug\net8.0\ProcessAst.Runtime.csproj.CoreCompileInputs.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\obj\Debug\net8.0\ProcessA.33AF9DA6.Up2Date
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\obj\Debug\net8.0\ProcessAst.Runtime.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\obj\Debug\net8.0\refint\ProcessAst.Runtime.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\obj\Debug\net8.0\ProcessAst.Runtime.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Runtime\obj\Debug\net8.0\ref\ProcessAst.Runtime.dll

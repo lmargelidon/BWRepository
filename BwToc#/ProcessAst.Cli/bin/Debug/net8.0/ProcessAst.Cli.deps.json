@@ -1,0 +1,123 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ProcessAst.Cli/1.0.0": {
+        "dependencies": {
+          "ProcessAst.Bw": "1.0.0",
+          "ProcessAst.Core": "1.0.0",
+          "ProcessAst.Export": "1.0.0",
+          "ProcessAst.Migration": "1.0.0",
+          "ProcessAst.RestFacade": "1.0.0",
+          "ProcessAst.Runtime": "1.0.0",
+          "ProcessAst.Validation": "1.0.0"
+        },
+        "runtime": {
+          "ProcessAst.Cli.dll": {}
+        }
+      },
+      "ProcessAst.Bw/1.0.0": {
+        "dependencies": {
+          "ProcessAst.Core": "1.0.0"
+        },
+        "runtime": {
+          "ProcessAst.Bw.dll": {}
+        }
+      },
+      "ProcessAst.Core/1.0.0": {
+        "runtime": {
+          "ProcessAst.Core.dll": {}
+        }
+      },
+      "ProcessAst.Export/1.0.0": {
+        "dependencies": {
+          "ProcessAst.Core": "1.0.0",
+          "ProcessAst.Migration": "1.0.0"
+        },
+        "runtime": {
+          "ProcessAst.Export.dll": {}
+        }
+      },
+      "ProcessAst.Migration/1.0.0": {
+        "dependencies": {
+          "ProcessAst.Core": "1.0.0",
+          "ProcessAst.Runtime": "1.0.0"
+        },
+        "runtime": {
+          "ProcessAst.Migration.dll": {}
+        }
+      },
+      "ProcessAst.RestFacade/1.0.0": {
+        "dependencies": {
+          "ProcessAst.Core": "1.0.0",
+          "ProcessAst.Runtime": "1.0.0"
+        },
+        "runtime": {
+          "ProcessAst.RestFacade.dll": {}
+        }
+      },
+      "ProcessAst.Runtime/1.0.0": {
+        "dependencies": {
+          "ProcessAst.Core": "1.0.0"
+        },
+        "runtime": {
+          "ProcessAst.Runtime.dll": {}
+        }
+      },
+      "ProcessAst.Validation/1.0.0": {
+        "dependencies": {
+          "ProcessAst.Core": "1.0.0"
+        },
+        "runtime": {
+          "ProcessAst.Validation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProcessAst.Cli/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProcessAst.Bw/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProcessAst.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProcessAst.Export/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProcessAst.Migration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProcessAst.RestFacade/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProcessAst.Runtime/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProcessAst.Validation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

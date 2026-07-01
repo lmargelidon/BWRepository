@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "HKgTcx81AnH8tOgVRY9xrdhkxvR8SF1o6DnC3u0ZA1o=",
+  "Source": "ProcessAst.Host",
+  "BasePath": "_content/ProcessAst.Host",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

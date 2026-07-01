@@ -1,0 +1,17 @@
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\obj\Debug\net8.0\ProcessAst.Migration.csproj.AssemblyReference.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\obj\Debug\net8.0\ProcessAst.Migration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\obj\Debug\net8.0\ProcessAst.Migration.AssemblyInfoInputs.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\obj\Debug\net8.0\ProcessAst.Migration.AssemblyInfo.cs
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\obj\Debug\net8.0\ProcessAst.Migration.csproj.CoreCompileInputs.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\bin\Debug\net8.0\ProcessAst.Migration.deps.json
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\bin\Debug\net8.0\ProcessAst.Migration.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\bin\Debug\net8.0\ProcessAst.Migration.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\bin\Debug\net8.0\ProcessAst.Core.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\bin\Debug\net8.0\ProcessAst.Runtime.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\bin\Debug\net8.0\ProcessAst.Core.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\bin\Debug\net8.0\ProcessAst.Runtime.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\obj\Debug\net8.0\ProcessA.37017789.Up2Date
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\obj\Debug\net8.0\ProcessAst.Migration.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\obj\Debug\net8.0\refint\ProcessAst.Migration.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\obj\Debug\net8.0\ProcessAst.Migration.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Migration\obj\Debug\net8.0\ref\ProcessAst.Migration.dll

@@ -1,0 +1,15 @@
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\bin\Debug\net8.0\ProcessAst.Validation.deps.json
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\bin\Debug\net8.0\ProcessAst.Validation.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\bin\Debug\net8.0\ProcessAst.Validation.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\bin\Debug\net8.0\ProcessAst.Core.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\bin\Debug\net8.0\ProcessAst.Core.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\obj\Debug\net8.0\ProcessAst.Validation.csproj.AssemblyReference.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\obj\Debug\net8.0\ProcessAst.Validation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\obj\Debug\net8.0\ProcessAst.Validation.AssemblyInfoInputs.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\obj\Debug\net8.0\ProcessAst.Validation.AssemblyInfo.cs
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\obj\Debug\net8.0\ProcessAst.Validation.csproj.CoreCompileInputs.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\obj\Debug\net8.0\ProcessA.9D764F53.Up2Date
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\obj\Debug\net8.0\ProcessAst.Validation.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\obj\Debug\net8.0\refint\ProcessAst.Validation.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\obj\Debug\net8.0\ProcessAst.Validation.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Validation\obj\Debug\net8.0\ref\ProcessAst.Validation.dll

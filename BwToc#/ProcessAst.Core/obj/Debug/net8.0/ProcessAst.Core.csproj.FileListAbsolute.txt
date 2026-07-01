@@ -1,0 +1,11 @@
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\bin\Debug\net8.0\ProcessAst.Core.deps.json
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\bin\Debug\net8.0\ProcessAst.Core.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\bin\Debug\net8.0\ProcessAst.Core.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\obj\Debug\net8.0\ProcessAst.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\obj\Debug\net8.0\ProcessAst.Core.AssemblyInfoInputs.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\obj\Debug\net8.0\ProcessAst.Core.AssemblyInfo.cs
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\obj\Debug\net8.0\ProcessAst.Core.csproj.CoreCompileInputs.cache
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\obj\Debug\net8.0\ProcessAst.Core.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\obj\Debug\net8.0\refint\ProcessAst.Core.dll
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\obj\Debug\net8.0\ProcessAst.Core.pdb
+C:\Users\LMargelidon\Downloads\process-ast-v11-dotnet-fixed\process-ast-v11-dotnet-fixed\src\ProcessAst.Core\obj\Debug\net8.0\ref\ProcessAst.Core.dll
